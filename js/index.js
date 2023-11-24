@@ -30,11 +30,13 @@ function reemplazarP(padre){
 }
 
 
-// function addFecha(){
-//     var fecha = new Date();
-//     var div = document.getElementById("contenedor");
-//     var nuevoP = document.createElement("p");
-//     var contenido = document.createTextNode(fecha.getDate);
-//     nuevoP.appendChild(contenido);
-//     document.insertBefore(nuevoP,div);
-// }
+function addFecha(){
+   
+    var fecha = new Date();
+    var div = document.getElementById("contenedor");
+    var padre = div.parentNode;
+    var nuevoP = document.createElement("p");
+    var contenido = document.createTextNode(fecha.getDate());
+    nuevoP.appendChild(contenido);
+    padre.insertBefore(nuevoP,div);
+}
