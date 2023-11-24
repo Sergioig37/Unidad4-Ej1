@@ -1,14 +1,11 @@
 window.addEventListener("load",init);
+
+ var padre = document.getElementById("contenedor");
+ 
 function init(){
     alert("Iniciando cambio");
-    var padre = document.getElementById("contenedor");
-    addP();
-    borrarElemento(padre);
-    reemplazarP(padre);
-    addFecha();
-
 }
-
+   
 function borrarElemento(elementoPadre){
     var enlace = document.getElementById("enlace")
     elementoPadre.removeChild(enlace);
@@ -39,4 +36,8 @@ function addFecha(){
     var contenido = document.createTextNode(fecha.getDate());
     nuevoP.appendChild(contenido);
     padre.insertBefore(nuevoP,div);
-}
+} 
+addP();
+borrarElemento(padre);
+reemplazarP(padre);
+addFecha();
