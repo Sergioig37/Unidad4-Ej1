@@ -1,7 +1,5 @@
-window.addEventListener("load",init);
 
  var padre = document.getElementById("contenedor");
- 
 function init(){
     alert("Iniciando cambio");
 }
@@ -28,7 +26,7 @@ function reemplazarP(padre){
 
 
 function addFecha(){
-   
+
     var fecha = new Date();
     var div = document.getElementById("contenedor");
     var padre = div.parentNode;
@@ -37,6 +35,8 @@ function addFecha(){
     nuevoP.appendChild(contenido);
     padre.insertBefore(nuevoP,div);
 } 
+
+init();
 addP();
 borrarElemento(padre);
 reemplazarP(padre);
